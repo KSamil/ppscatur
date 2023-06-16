@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Page Not Found</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 150px auto;
+            padding: 30px;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+        
+        #counter {
+            font-size: 2em;
+            color: #dc3545;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="display-4">404 Page Not Found</h1>
+        <p class="lead">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+        <hr class="my-4">
+        <p>You will be redirected to the main page in <span id="counter">5</span> seconds...</p>
+    </div>
+
+    <script type="text/javascript">
+        var counter = 5;
+        var intervalId = null;
+
+        function startCountdown() {
+            intervalId = setInterval(function() {
+                counter--;
+                document.getElementById('counter').textContent = counter;
+
+                if (counter === 0) {
+                    clearInterval(intervalId);
+                    window.location.href = "/"; // This will redirect to your main page
+                }
+            }, 1000);
+        }
+
+        startCountdown();
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
