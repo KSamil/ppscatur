@@ -61,52 +61,29 @@
             </div>
             <thead class="table-light">
                 <tr>
-                    <th scope="col">Fullname</th>
-                    <th scope="col">NIP</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Username</th>
-                    <th scope="col">Nomor Peserta</th>
-                    <th scope="col">DOB</th>
-                    <th scope="col">Fakultas</th>
-                    <th scope="col">Status Bayar</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Report</th>
+                    <th scope="col">Gambar</th>
                 </tr>
             </thead>
             <tbody>
                 <% data.forEach(function(data) { %>
                     <tr>
                         <td>
-                            <%= data.Fullname %>
+                            <%= data.nama %>
                         </td>
                         <td>
-                            <%= data.NIP %>
+                            <%= data.report %>
                         </td>
                         <td>
-                            <%= data.Email %>
-                        </td>
-                        <td>
-                            <%= data.Username %>
-                        </td>
-                        <td>
-                            <%= data.NomorPeserta %>
-                        </td>
-                        <td>
-                            <%= data.DOB %>
-                        </td>
-                        <td>
-                            <%= ["FTSPK", "FTEIC", "FTIRS", "FTK", "FV", "FDBD", "F"][data.Fakultas - 1] %>
-                        </td>
-                        <td>
-                            <%= data.Payment == 1 ? 'Sudah dibayar' : 'Belum dibayar' %>
-                        </td>
-                        <td>
-                            <button data-id="" class="btn btn-danger btn-sm delete-btn">Delete</button>
+                            <%= data.file %>
                         </td>
                     </tr>
                     <% }); %>
             </tbody>
         </table>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

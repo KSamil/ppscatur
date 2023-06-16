@@ -48,14 +48,41 @@
             gap: 1em;
             margin-top: 2em;
         }
+        
+        .bluedark {
+            background-color: #092f67;
+        }
+        
+        .whitefont {
+            color: #ffffff;
+        }
     </style>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-sm bluedark">
+        <div class="container-fluid">
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link whitefont" href="/accounts">akun db</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link whitefont" href="/mailbox">mailbox db</a>
+                </li>
+            </ul>
+            <!--PROFILE IS HERE-->
+            <a class="navbar-brand whitefont" href="/profile">
+                <img src=" ... " alt="Avatar Logo" style="width:40px; " class="rounded-pill ">
+            </a>
+            <!--PROFILE IS HERE-->
+        </div>
+
+    </nav>
     <div class="container py-5">
         <div class="buttons">
             <a href="/" class="btn btn-primary">Back to Menu</a>
-            <a href="/editprofile" class="btn btn-primary">Edit</a>
+            <!--<a href="/editprofile" class="btn btn-primary">Edit</a>-->
             <a href="/helpform" class="btn btn-secondary">Help</a>
         </div>
         <% data.forEach(function(data) { %>

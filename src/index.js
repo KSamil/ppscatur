@@ -3,6 +3,7 @@ const accountRoutes = require('./routes/accounts');
 const uploadRoutes = require('./routes/upload');
 const landingRoutes = require('./routes/landing');
 const profileRoutes = require('./routes/profile');
+const mailboxRoutes = require('./routes/mailbox');
 const middlewareLogRequests = require('./middleware/logs.js')
 const path = require('path');
 //const upload = require('./middleware/multer.js');
@@ -21,6 +22,7 @@ app.use('/', landingRoutes);
 app.use('/accounts', accountRoutes);
 app.use('/upload', uploadRoutes);
 app.use('/profile', profileRoutes);
+app.use('/mailbox', mailboxRoutes);
 app.use('/help', (req, res) => {
     res.render('input', {
         title: 'Help',

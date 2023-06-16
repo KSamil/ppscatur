@@ -39,10 +39,37 @@
         .form-container form button {
             margin-top: 2em;
         }
+        
+        .bluedark {
+            background-color: #092f67;
+        }
+        
+        .whitefont {
+            color: #ffffff;
+        }
     </style>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-sm bluedark">
+        <div class="container-fluid">
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link whitefont" href="/accounts">akun db</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link whitefont" href="/mailbox">mailbox db</a>
+                </li>
+            </ul>
+            <!--PROFILE IS HERE-->
+            <a class="navbar-brand whitefont" href="/profile">
+                <img src=" ... " alt="Avatar Logo" style="width:40px; " class="rounded-pill ">
+            </a>
+            <!--PROFILE IS HERE-->
+        </div>
+
+    </nav>
     <div class="container py-5">
         <div class="buttons">
             <a href="/profile" class="btn btn-primary">Back</a>
@@ -73,7 +100,7 @@
             <div id="technicalIssuesForm" class="form-container">
                 <div class="mb-3">
                     <label for="helpDetails" class="form-label">Permasalahan Lainnya</label>
-                    <textarea class="form-control" id="helpDetails" rows="3"></textarea>
+                    <textarea class="form-control" id="helpDetails" rows="2"></textarea>
                     <p> </p>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
@@ -87,10 +114,8 @@
             $("#helpTopic").change(function() {
                 $(".form-container").hide();
                 if ($(this).val() == '1') {
-                    $("#accountForm").show();
-                } else if ($(this).val() == '2') {
                     $("#paymentForm").show();
-                } else if ($(this).val() == '3') {
+                } else if ($(this).val() == '2') {
                     $("#technicalIssuesForm").show();
                 }
             });
